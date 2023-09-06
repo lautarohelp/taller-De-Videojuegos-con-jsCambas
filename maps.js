@@ -10,6 +10,8 @@ const emojis = {
     'I': '💰',
     'PLAYER': '🏃‍♂️',
     'PLAYER2':'🚶‍♂️',
+    'PLAYER3':'👨‍🦽',
+    'PLAYER4':'☠️',
     'BOMB_COLLISION': '🔥',
     'GAME_OVER': '👎',
     'WIN': '🏆',
@@ -54,14 +56,14 @@ const maps = [];
     XXXXXXXXXX
 `);
     maps.push(`
-    XXXX---XXX
-    XXX--X-XXX
-    XX--X--XXX
-    XX-XX-XXXX
-    XX-XX--XXX
-    X--XXX-XXX
-    X-XXX--XXX
-    X--XX-XXXX
-    XX-XX-XOXX
-    I--XX---XX
+    OXXX---XXX
+    -XX--X-XXX
+    -X--X--XXX
+    -X-XX-XXXX
+    -X-XX--XXX
+    -X-XXX-XXX
+    -X--X--XXX
+    -XX-X-XXXX
+    -X--X--XXX
+    ---XXX--IX
     `)

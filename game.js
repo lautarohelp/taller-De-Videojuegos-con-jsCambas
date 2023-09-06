@@ -18,6 +18,8 @@ let timeStart;
 let timePlayer;
 let timeInterval;
 
+let player = emojis['PLAYER'];
+
 
 const playerPosition = {
     x:undefined,
@@ -104,6 +106,7 @@ function startGame() {
                     x: posX,
                     y: posY,
                 })
+                
             }
             
             game.fillText(emoji,posX,posY)
@@ -152,8 +155,8 @@ function movePlayer() {
         levelFail();
     }
 
-    game.fillText(emojis['PLAYER'],playerPosition.x,playerPosition.y)
-
+    game.fillText(player,playerPosition.x,playerPosition.y)
+    
 }
 
 function levelWin() {
@@ -173,8 +176,25 @@ function gameOver() {
     clearInterval(timeInterval);
 } 
 
+function failLive() {
+    player = [];
+    if (lives >= 2) {
+        player.push(emojis['PLAYER2']);
+    }else if (lives >= 1) {
+        player.push(emojis['PLAYER3']);
+    }else if (lives >= 0) {
+        player.push(emojis['PLAYER4'])
+    }
+   /*  player.push(emojis['PLAYER2']);
+    player.push(emojis['PLAYER3']);
+    player.push(emojis['PLAYER4']) */
+}
+
 function levelFail() {
-    lives--;
+
+    if (lives--) {
+        failLive();
+    }
 
     if (lives <= 0) {
         level = 0;
