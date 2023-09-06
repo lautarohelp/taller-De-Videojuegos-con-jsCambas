@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demons</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/7297/7297826.png" type="image/x-icon">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="game"></canvas>
+        <div class="btns">
+            <button id="up">⬆️</button>
+            <button id="left">⬅️</button>
+            <button id="right">➡️</button>
+            <button id="down">⬇️</button>
+        </div>
+
+        <div class="messages">
+            <p>Vidas: <span id="lives"></span></p>
+            <p>⏱️: <span id="time"></span></p>
+            <p>Record: <samp id="record"></samp></p>
+            <p id="result"></p>
+        </div>
+
+        <section class="inactive container-win">
+            <div>
+            <h2> ¡Felicidades! Terminaste el juego</h2>
+            <span>🏆</span>
+            <p class="newrecord"></p>
+            <a href="./index.html"><button>Volver a Jugar</button></a>
+            </div>
+        </section>
+
+        
+        <section class="inactive container-win fail">
+            <div>
+            <h2> GAME OVER</h2>
+            <span>🤣</span>
+            <p class="newrecord"></p>
+            <a href="./index.html"><button>Volver a Jugar</button></a>
+            </div>
+        </section>
+    </div>
+
+    <script src="./maps.js"></script>
+    <script src="./game.js"></script>
+</body>
+</html>
